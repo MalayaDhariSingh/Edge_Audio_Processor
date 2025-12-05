@@ -1,0 +1,13 @@
+audio:
+  sample_rate: 16000    # 16kHz is standard for Speech AI (Whisper, etc.)
+  block_size: 1024      # Number of samples per chunk (lower = less latency, higher = safer)
+  channels: 1           # Mono audio (Standard for voice command)
+  dtype: "float32"      # Standard floating point for audio processing
+
+processing:
+  noise_threshold: 2.5 # Sensitivity of the noise gate
+  snr_smoothing: 0.1    # Smoothing factor for visual stability (0.0 - 1.0)
+
+visualization:
+  refresh_interval: 30  # Milliseconds between plot updates
+  history_buffer: 50    # How many chunks to keep for the scrolling graph
